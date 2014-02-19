@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @cow.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cow.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @cow.age %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cow.description %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @cow.birthday %>
+</p>
+
+<p>
+  <strong>Delivery:</strong>
+  <%= @cow.delivery %>
+</p>
+
+<%= link_to 'Edit', edit_cow_path(@cow) %> |
+<%= link_to 'Back', kine_path %>

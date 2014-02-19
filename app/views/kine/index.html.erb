@@ -1,0 +1,37 @@
+<h1>Listing kine</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Description</th>
+      <th>Birthday</th>
+      <th>Delivery</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kine.each do |cow| %>
+      <tr>
+        <td><%= cow.number %></td>
+        <td><%= cow.name %></td>
+        <td><%= cow.age %></td>
+        <td><%= cow.description %></td>
+        <td><%= cow.birthday %></td>
+        <td><%= cow.delivery %></td>
+        <td><%= link_to 'Show', cow %></td>
+        <td><%= link_to 'Edit', edit_cow_path(cow) %></td>
+        <td><%= link_to 'Destroy', cow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cow', new_cow_path %>
